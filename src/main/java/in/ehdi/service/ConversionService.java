@@ -42,7 +42,7 @@ public class ConversionService {
 
     /**
      * Ordered conversion list by using TreeMap
-     * @return ordered conversion map
+     * @return conversion map collection
      */
     private Map<ConversionEnum, TreeMap<Integer, CurrencyEnum>> conversionOrderMapCollection() {
 
