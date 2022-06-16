@@ -6,12 +6,14 @@ public class CalculationService {
 
     private static final Double PRICE_FEE = 0.75;
 
-    public Double hotelPriceToUser(Double price, ConversionEnum conversionEnum) {
-        ConversionService conversionService = new ConversionService();
+    public Double hotelPriceToUser(Double eurPrice, ConversionEnum conversionEnum) {
+        var baseFare = eurPrice; // it is redundant variable, just for readability
+        var conversionService = new ConversionService();
         for (Double conversionRate : conversionService.conversionRateList(conversionEnum)) {
-            price = conversionRate * price;
+            baseFare = conversionRate * baseFare;
         }
-        return price + PRICE_FEE;
+        var finalPrice =  baseFare + PRICE_FEE; // it is redundant variable, just for readability
+        return finalPrice;
     }
 
 }
