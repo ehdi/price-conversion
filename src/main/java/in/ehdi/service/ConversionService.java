@@ -60,11 +60,11 @@ public class ConversionService {
 
         conversionMap.put(ConversionEnum.EUR2CAD2USD, conversionFromCadToUSD);
 
-        TreeMap<Integer, CurrencyEnum> conversionFromAedToEur = new TreeMap<>();
-        conversionFromAedToEur.put(1, CurrencyEnum.ADE);
-        conversionFromAedToEur.put(2, CurrencyEnum.USD);
+        TreeMap<Integer, CurrencyEnum> conversionFromAedToEurToUsd = new TreeMap<>();
+        conversionFromAedToEurToUsd.put(1, CurrencyEnum.ADE);
+        conversionFromAedToEurToUsd.put(2, CurrencyEnum.USD);
 
-        conversionMap.put(ConversionEnum.EUR2AED2USD, conversionFromAedToEur);
+        conversionMap.put(ConversionEnum.EUR2AED2USD, conversionFromAedToEurToUsd);
 
         return conversionMap;
     }
