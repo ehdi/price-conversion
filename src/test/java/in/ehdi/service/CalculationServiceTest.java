@@ -35,7 +35,7 @@ public class CalculationServiceTest {
     }
 
     @Test
-    @DisplayName("Convert Euro price to United Arab Emirates dirham price then to Euro price")
+    @DisplayName("Convert Euro price to United Arab Emirates dirham price then to United States price")
     void shouldConvertAedToEuro() {
         var actualPrice = service.hotelPriceToUser(EUR_BASE_PRICE, ConversionEnum.EUR2AED2USD);
         var expectedPrice = 494.75;
