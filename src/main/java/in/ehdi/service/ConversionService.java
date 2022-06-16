@@ -18,11 +18,11 @@ public class ConversionService {
      */
     public List<Double> conversionRateList(ConversionEnum conversion){
        try {
-           List<Double> priceList = new ArrayList<>();
+           List<Double> conversionRateList = new ArrayList<>();
            for (Map.Entry<Integer, CurrencyEnum> x : conversionOrderMapCollection().get(conversion).entrySet()) {
-               priceList.add(currencyRateMap().get(x.getValue()));
+               conversionRateList.add(currencyRateMap().get(x.getValue()));
            }
-           return priceList;
+           return conversionRateList;
        } catch (NullPointerException e){
            return Collections.emptyList();
        }
