@@ -27,7 +27,7 @@ public class CalculationServiceTest {
     }
 
     @Test
-    @DisplayName("Convert Euro price to United States price")
+    @DisplayName("Convert Euro price to British Pound then to United States price")
     void shouldConvertEuroToUsd() {
         var actualPrice = service.hotelPriceToUser(EUR_BASE_PRICE, ConversionEnum.EUR2USD);
         var expectedPrice = 950.75;
